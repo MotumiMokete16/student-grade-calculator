@@ -8,7 +8,7 @@ notepad README.md
 * *Deployment Lead:* [Nkosi and Obakeng] - Dockerfile, Render.com deployment.
 
 ## Getting Started
-1. Clone the repo: git clone https://github.com/disparta/student-grade-calculator
+1. Clone the repo: git clone https://github.com/Cliff-vut/student-grade-calculator
 2. Create your feature branch: git checkout -b feature/your-task-name
 3. Push changes: git push origin feature/your-task-name
 
