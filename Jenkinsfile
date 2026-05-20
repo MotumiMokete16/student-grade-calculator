@@ -16,13 +16,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn clean package -DskipTests'
+                bat 'mvn clean package -DskipTests'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'mvn test'
+                bat 'mvn test'
             }
             post {
                 always {
@@ -33,7 +33,7 @@ pipeline {
 
         stage('Package') {
             steps {
-                sh 'mvn package'
+                bat 'mvn package'
                 archiveArtifacts artifacts: 'target/*.war'
             }
         }
