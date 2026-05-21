@@ -1,0 +1,22 @@
+name: Deploy application , push to main
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  deploy:
+    name: Trigger Render Deployment
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Invoke Render Deploy Hook
+        env:
+          DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        run: |
+          echo "Triggering Render deployment..."
+          curl -f "$DEPLOY_HOOK_URL"
